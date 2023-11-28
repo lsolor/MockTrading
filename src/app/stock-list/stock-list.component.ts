@@ -8,13 +8,14 @@ import { concatWith } from 'rxjs';
 })
 export class StockListComponent {
     
-  followedStocks: any[] = ['ACME', 'STRK'];
+  followedStocks: string[] = ['ACME', 'STRK'];
   dropDown: boolean = false;
 
 
   getDropdown()
   {
     this.dropDown = true;
-    console.log(`the value of dropDown is ${this.dropDown}`);
+    console.log(`there are ${this.followedStocks.length} in this list`);
+  
   }
 }

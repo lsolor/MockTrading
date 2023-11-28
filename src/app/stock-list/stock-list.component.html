@@ -17,6 +17,6 @@
                     <button class="modal__btn">Add</button>
                 </div>
             </div> -->
-    <div *ngFor="let stock of followedStocks;">
-        <app-stock-details>stock</app-stock-details>
+    <div *ngFor="let currentStock of followedStocks;">
+        <app-stock-details [stock] = "currentStock"></app-stock-details>
     </div>
