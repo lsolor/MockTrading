@@ -8,24 +8,24 @@ import { Observable, catchError, tap, throwError } from 'rxjs';
   styleUrls: ['../css/styles.css']
 })
 export class StockDetailsComponent {
-  @Input() stock!: string;
-  currentPrice: string = "";
+  @Input() stock: string = '';
+  currentPrice: string = '';
   baseUrl: string = "demomocktradingserver.azurewebsites.net/";
-  constructor(private http: HttpClient) {
-  }
+  // constructor(private http: HttpClient) {
+  // }
 
   ngOnInit(): void {
-    this.getStockPrice();
+    // this.getStockPrice();
 
   }
 
-  getStockPrice(): Observable<string> {
-      return this.http.get<string>(`${this.baseUrl}stocks/${this.stock}/price`)
-      .pipe(
-        tap(data => console.log(JSON.stringify(data))),
-        catchError(this.handleError)
-      );
-   }
+  // getStockPrice(): Observable<string> {
+  //     return this.http.get<string>(`${this.baseUrl}stocks/${this.stock}/price`)
+  //     .pipe(
+  //       tap(data => console.log(JSON.stringify(data))),
+  //       catchError(this.handleError)
+  //     );
+  //  }
 
    private handleError(err: { error: { message: any; }; status: any; body: { error: any; }; }) {
     // in a real world app, we may send the server to some remote logging infrastructure
