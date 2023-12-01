@@ -16,6 +16,5 @@ export class StockListComponent {
   {
     this.dropDown = !this.dropDown;
     console.log('dropDown value:', this.dropDown);
-  
   }
 }
