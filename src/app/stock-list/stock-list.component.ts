@@ -14,8 +14,8 @@ export class StockListComponent {
 
   getDropdown()
   {
-    this.dropDown = true;
-    console.log(`there are ${this.followedStocks.length} in this list`);
+    this.dropDown = !this.dropDown;
+    console.log('dropDown value:', this.dropDown);
   
   }
 }
